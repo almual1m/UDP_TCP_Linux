@@ -1,0 +1,385 @@
+Normal:
+
+****sending file name & extension to receiver
+
+<12:58:03.239912> [sending] PKT0 1024 (1024)
+<12:58:03.240398> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<12:58:03.240872> [recv ack] ACK0 1024
+<12:58:03.241284> [sending] PKT1 2048 (1024)
+<12:58:03.241711> [recv data] PKT1 2048 (1024) ACCEPTED
+<12:58:03.242102> [recv ack] ACK1 2048
+<12:58:03.242508> [sending] PKT0 3072 (1024)
+<12:58:03.242925> [recv data] PKT0 3072 (1024) ACCEPTED
+<12:58:03.243367> [recv ack] ACK0 3072
+<12:58:03.243779> [sending] PKT1 4096 (1024)
+<12:58:03.244189> [recv data] PKT1 4096 (1024) ACCEPTED
+<12:58:03.244579> [recv ack] ACK1 4096
+<12:58:03.244989> [sending] PKT0 5120 (1024)
+<12:58:03.245403> [recv data] PKT0 5120 (1024) ACCEPTED
+<12:58:03.245882> [recv ack] ACK0 5120
+<12:58:03.246290> [sending] PKT1 6144 (1024)
+<12:58:03.246712> [recv data] PKT1 6144 (1024) ACCEPTED
+<12:58:03.247101> [recv ack] ACK1 6144
+<12:58:03.247517> [sending] PKT0 7168 (1024)
+<12:58:03.247929> [recv data] PKT0 7168 (1024) ACCEPTED
+<12:58:03.248322> [recv ack] ACK0 7168
+<12:58:03.248688> [sending] PKT1 8192 (1024)
+<12:58:03.249059> [recv data] PKT1 8192 (1024) ACCEPTED
+<12:58:03.249480> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<12:58:03.249860> [sending] PKT0 9216 (1024)
+<12:58:03.250377> [recv data] PKT0 9216 (1024) ACCEPTED
+<12:58:03.259670> [receiver completed]
+
+****Duration of process from receiver side: 0.0203139781952ms
+...Receiver exited gracefully
+
+
+
+<12:58:03.270404> [recv ack] ACK0 9216
+<12:58:03.270511> [sender completed]
+
+****Duration of process from sender side: 0.0311231613159ms
+...Sender exited gracefully
+
+1. sudo tc qdisc add dev lo root netem rate 1mbit delay 25ms
+
+****sending file name & extension to receiver
+
+<12:58:54.339296> [sending] PKT0 1024 (1024)
+<12:58:54.375055> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<12:58:54.411225> [recv ack] ACK0 1024
+<12:58:54.411748> [sending] PKT1 2048 (1024)
+<12:58:54.445802> [recv data] PKT1 2048 (1024) ACCEPTED
+<12:58:54.479788> [recv ack] ACK1 2048
+<12:58:54.480269> [sending] PKT0 3072 (1024)
+<12:58:54.514302> [recv data] PKT0 3072 (1024) ACCEPTED
+<12:58:54.548313> [recv ack] ACK0 3072
+<12:58:54.548795> [sending] PKT1 4096 (1024)
+<12:58:54.582834> [recv data] PKT1 4096 (1024) ACCEPTED
+<12:58:54.616858> [recv ack] ACK1 4096
+<12:58:54.617343> [sending] PKT0 5120 (1024)
+<12:58:54.651381> [recv data] PKT0 5120 (1024) ACCEPTED
+<12:58:54.685387> [recv ack] ACK0 5120
+<12:58:54.685869> [sending] PKT1 6144 (1024)
+<12:58:54.719904> [recv data] PKT1 6144 (1024) ACCEPTED
+<12:58:54.753921> [recv ack] ACK1 6144
+<12:58:54.754402> [sending] PKT0 7168 (1024)
+<12:58:54.788444> [recv data] PKT0 7168 (1024) ACCEPTED
+<12:58:54.822481> [recv ack] ACK0 7168
+<12:58:54.822934> [sending] PKT1 8192 (1024)
+<12:58:54.856925> [recv data] PKT1 8192 (1024) ACCEPTED
+<12:58:54.890937> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<12:58:54.891401> [sending] PKT0 9216 (1024)
+<12:58:54.925391> [recv data] PKT0 9216 (1024) ACCEPTED
+<12:58:54.925857> [receiver completed]
+
+****Duration of process from receiver side: 0.561451196671ms
+...Receiver exited gracefully
+
+
+
+<12:58:54.959414> [recv ack] ACK0 9216
+<12:58:54.959523> [sender completed]
+
+****Duration of process from sender side: 0.620733976364ms
+...Sender exited gracefully
+
+2. sudo tc qdisc add dev lo root netem rate 1mbit loss 20%
+
+****sending file name & extension to receiver
+
+<13:01:54.878890> [sending] PKT0 1024 (1024)
+<13:01:54.888206> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<13:01:54.897147> [recv ack] ACK0 1024
+<13:01:54.897551> [sending] PKT1 2048 (1024)
+<13:01:54.906498> [recv data] PKT1 2048 (1024) ACCEPTED
+<13:01:54.915475> [recv ack] ACK1 2048
+<13:01:54.915940> [sending] PKT0 3072 (1024)
+<13:01:54.924941> [recv data] PKT0 3072 (1024) ACCEPTED
+<13:01:54.933876> [recv ack] ACK0 3072
+<13:01:54.934280> [sending] PKT1 4096 (1024)
+<13:01:54.945420> [recv data] PKT1 4096 (1024) ACCEPTED
+<13:01:58.943794> [recv corrupted packet]
+<13:01:58.952776> [recv ack] ACK1 4096
+<13:01:58.953218> [sending] PKT0 5120 (1024)
+<13:01:58.962183> [recv data] PKT0 5120 (1024) ACCEPTED
+<13:01:58.971846> [recv ack] ACK0 5120
+<13:01:58.972301> [sending] PKT1 6144 (1024)
+<13:01:58.981296> [recv data] PKT1 6144 (1024) ACCEPTED
+<13:02:06.987798> [recv corrupted packet]
+<13:02:06.996763> [recv ack] ACK1 6144
+<13:02:06.997245> [sending] PKT0 7168 (1024)
+<13:02:07.006204> [recv data] PKT0 7168 (1024) ACCEPTED
+<13:02:07.015144> [recv ack] ACK0 7168
+<13:02:07.015526> [sending] PKT1 8192 (1024)
+<13:02:07.024477> [recv data] PKT1 8192 (1024) ACCEPTED
+<13:02:07.033429> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<13:02:07.033841> [sending] PKT0 9216 (1024)
+<13:02:07.042754> [recv data] PKT0 9216 (1024) ACCEPTED
+<13:02:07.043160> [receiver completed]
+
+****Duration of process from receiver side: 12.164026022ms
+...Receiver exited gracefully
+
+
+
+<13:02:07.051715> [recv ack] ACK0 9216
+<13:02:07.051824> [sender completed]
+
+****Duration of process from sender side: 12.1733958721ms
+...Sender exited gracefully
+
+3. sudo tc qdisc add dev lo root netem rate 1mbit delay 25ms reorder 10%
+
+****sending file name & extension to receiver
+
+<13:03:33.827665> [sending] PKT0 1024 (1024)
+<13:03:33.861828> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<13:03:33.895870> [recv ack] ACK0 1024
+<13:03:33.896375> [sending] PKT1 2048 (1024)
+<13:03:33.930445> [recv data] PKT1 2048 (1024) ACCEPTED
+<13:03:33.965789> [recv ack] ACK1 2048
+<13:03:33.966366> [sending] PKT0 3072 (1024)
+<13:03:34.001067> [recv data] PKT0 3072 (1024) ACCEPTED
+<13:03:34.035055> [recv ack] ACK0 3072
+<13:03:34.035553> [sending] PKT1 4096 (1024)
+<13:03:34.036034> [recv data] PKT1 4096 (1024) ACCEPTED
+<13:03:34.070008> [recv ack] ACK1 4096
+<13:03:34.070502> [sending] PKT0 5120 (1024)
+<13:03:34.104555> [recv data] PKT0 5120 (1024) ACCEPTED
+<13:03:34.138634> [recv ack] ACK0 5120
+<13:03:34.139211> [sending] PKT1 6144 (1024)
+<13:03:34.180501> [recv data] PKT1 6144 (1024) ACCEPTED
+<13:03:34.214589> [recv ack] ACK1 6144
+<13:03:34.215066> [sending] PKT0 7168 (1024)
+<13:03:34.249118> [recv data] PKT0 7168 (1024) ACCEPTED
+<13:03:34.283572> [recv ack] ACK0 7168
+<13:03:34.284024> [sending] PKT1 8192 (1024)
+<13:03:34.318313> [recv data] PKT1 8192 (1024) ACCEPTED
+<13:03:34.359199> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<13:03:34.359760> [sending] PKT0 9216 (1024)
+<13:03:34.393733> [recv data] PKT0 9216 (1024) ACCEPTED
+<13:03:34.394186> [receiver completed]
+
+****Duration of process from receiver side: 0.541340112686ms
+...Receiver exited gracefully
+
+
+
+<13:03:34.427737> [recv ack] ACK0 9216
+<13:03:34.427840> [sender completed]
+
+****Duration of process from sender side: 0.600620985031ms
+...Sender exited gracefully
+
+
+4. sudo tc qdisc add dev lo root netem rate 1mbit corrupt 20%
+
+****sending file name & extension to receiver
+
+<13:04:43.193631> [sending] PKT0 1024 (1024)
+<13:04:43.202823> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<13:04:43.211809> [recv ack] ACK0 1024
+<13:04:43.212261> [sending] PKT1 2048 (1024)
+<13:04:43.221309> [recv data] PKT1 2048 (1024) ACCEPTED
+<13:04:43.230285> [recv ack] ACK1 2048
+<13:04:43.230834> [sending] PKT0 3072 (1024)
+<13:04:43.239831> [recv data] PKT0 3072 (1024) ACCEPTED
+<13:04:43.248780> [recv ack] ACK0 3072
+<13:04:43.249179> [sending] PKT1 4096 (1024)
+<13:04:43.258160> [recv data] PKT1 4096 (1024) ACCEPTED
+<13:04:43.274532> [recv ack] ACK1 4096
+<13:04:43.275012> [sending] PKT0 5120 (1024)
+<13:04:47.284168> [recv corrupted packet]
+<13:04:47.305244> [recv data] PKT0 5120 (1024) ACCEPTED
+<13:04:47.319729> [recv ack] ACK0 5120
+<13:04:47.320272> [sending] PKT1 6144 (1024)
+<13:04:47.329286> [recv data] PKT1 6144 (1024) ACCEPTED
+<13:04:47.340355> [recv ack] ACK1 6144
+<13:04:47.340801> [sending] PKT0 7168 (1024)
+<13:04:47.349780> [recv data] PKT0 7168 (1024) ACCEPTED
+<13:04:47.364236> [recv ack] ACK0 7168
+<13:04:47.364686> [sending] PKT1 8192 (1024)
+<13:04:51.376131> [recv corrupted packet]
+<13:04:55.376133> [recv data] PKT1 8192 (1024) ACCEPTED
+<13:04:55.385084> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<13:04:55.385478> [sending] PKT0 9216 (1024)
+<13:04:55.397736> [recv data] PKT0 9216 (1024) ACCEPTED
+<13:04:55.398179> [receiver completed]
+
+****Duration of process from receiver side: 12.2043910027ms
+...Receiver exited gracefully
+
+
+
+<13:04:55.415194> [recv ack] ACK0 9216
+<13:04:55.415304> [sender completed]
+
+****Duration of process from sender side: 12.2221119404ms
+...Sender exited gracefully
+
+5. sudo tc qdisc add dev lo root netem rate 1mbit duplicate 20%
+
+
+****sending file name & extension to receiver
+
+<13:05:50.522376> [sending] PKT0 1024 (1024)
+<13:05:50.531467> [recv data] PKT0 1024 (1024) ACCEPTED
+
+****receiving file
+
+<13:05:50.539616> [recv corrupted packet]
+<13:05:50.548161> [recv ack] ACK0 1024
+<13:05:50.548637> [sending] PKT1 2048 (1024)
+<13:05:50.574092> [recv data] PKT1 2048 (1024) ACCEPTED
+<13:05:50.582229> [recv corrupted packet]
+<13:05:50.590741> [recv corrupted packet]
+<13:05:50.599310> [recv corrupted packet]
+<13:05:50.607841> [recv ack] ACK1 2048
+<13:05:50.608305> [sending] PKT0 3072 (1024)
+<13:05:50.642335> [recv data] PKT0 3072 (1024) ACCEPTED
+<13:05:50.650439> [recv corrupted packet]
+<13:05:50.658963> [recv corrupted packet]
+<13:05:50.667508> [recv corrupted packet]
+<13:05:50.676020> [recv corrupted packet]
+<13:05:50.684587> [recv ack] ACK0 3072
+<13:05:50.685056> [sending] PKT1 4096 (1024)
+<13:05:50.727616> [recv data] PKT1 4096 (1024) ACCEPTED
+<13:05:50.735726> [recv corrupted packet]
+<13:05:50.744243> [recv corrupted packet]
+<13:05:50.752790> [recv corrupted packet]
+<13:05:50.761302> [recv corrupted packet]
+<13:05:50.769865> [recv corrupted packet]
+<13:05:50.778388> [recv corrupted packet]
+<13:05:50.786893> [recv corrupted packet]
+<13:05:50.795439> [recv ack] ACK1 4096
+<13:05:50.795888> [sending] PKT0 5120 (1024)
+<13:05:50.872569> [recv data] PKT0 5120 (1024) ACCEPTED
+<13:05:50.881594> [recv corrupted packet]
+<13:05:50.889228> [recv corrupted packet]
+<13:05:50.898295> [recv corrupted packet]
+<13:05:50.906324> [recv corrupted packet]
+<13:05:50.914803> [recv corrupted packet]
+<13:05:50.923334> [recv corrupted packet]
+<13:05:50.931874> [recv corrupted packet]
+<13:05:50.940388> [recv corrupted packet]
+<13:05:50.950913> [recv corrupted packet]
+<13:05:50.957498> [recv ack] ACK0 5120
+<13:05:50.957964> [sending] PKT1 6144 (1024)
+<13:05:51.060186> [recv data] PKT1 6144 (1024) ACCEPTED
+<13:05:51.068323> [recv corrupted packet]
+<13:05:51.076841> [recv corrupted packet]
+<13:05:51.085378> [recv corrupted packet]
+<13:05:51.093938> [recv corrupted packet]
+<13:05:51.102426> [recv corrupted packet]
+<13:05:51.110947> [recv corrupted packet]
+<13:05:51.119493> [recv corrupted packet]
+<13:05:51.128005> [recv corrupted packet]
+<13:05:51.136562> [recv corrupted packet]
+<13:05:51.145251> [recv corrupted packet]
+<13:05:51.153596> [recv corrupted packet]
+<13:05:51.162125> [recv corrupted packet]
+<13:05:51.170645> [recv corrupted packet]
+<13:05:51.179208> [recv ack] ACK1 6144
+<13:05:51.179667> [sending] PKT0 7168 (1024)
+<13:05:51.315974> [recv data] PKT0 7168 (1024) ACCEPTED
+<13:05:51.324151> [recv corrupted packet]
+<13:05:51.332699> [recv corrupted packet]
+<13:05:51.341207> [recv corrupted packet]
+<13:05:51.349788> [recv corrupted packet]
+<13:05:51.358270> [recv corrupted packet]
+<13:05:51.366803> [recv corrupted packet]
+<13:05:51.375315> [recv corrupted packet]
+<13:05:51.386299> [recv corrupted packet]
+<13:05:51.392410> [recv corrupted packet]
+<13:05:51.400928> [recv corrupted packet]
+<13:05:51.409430> [recv corrupted packet]
+<13:05:51.417973> [recv corrupted packet]
+<13:05:51.427224> [recv corrupted packet]
+<13:05:51.435058> [recv corrupted packet]
+<13:05:51.443559> [recv corrupted packet]
+<13:05:51.452069> [recv corrupted packet]
+<13:05:51.460598> [recv corrupted packet]
+<13:05:51.469165> [recv corrupted packet]
+<13:05:51.477684> [recv corrupted packet]
+<13:05:51.486183> [recv corrupted packet]
+<13:05:51.494708> [recv corrupted packet]
+<13:05:51.503271> [recv ack] ACK0 7168
+<13:05:51.503694> [sending] PKT1 8192 (1024)
+<13:05:51.733855> [recv data] PKT1 8192 (1024) ACCEPTED
+<13:05:51.742020> [recv corrupted packet]
+<13:05:51.750556> [recv corrupted packet]
+<13:05:51.759075> [recv corrupted packet]
+<13:05:51.767644> [recv corrupted packet]
+<13:05:51.776141> [recv corrupted packet]
+<13:05:51.784659> [recv corrupted packet]
+<13:05:51.793187> [recv corrupted packet]
+<13:05:51.801717> [recv corrupted packet]
+<13:05:51.810292> [recv corrupted packet]
+<13:05:51.818778> [recv corrupted packet]
+<13:05:51.827299> [recv corrupted packet]
+<13:05:51.835831> [recv corrupted packet]
+<13:05:51.844355> [recv corrupted packet]
+<13:05:51.852926> [recv corrupted packet]
+<13:05:51.861415> [recv corrupted packet]
+<13:05:51.869945> [recv corrupted packet]
+<13:05:51.878467> [recv corrupted packet]
+<13:05:51.889769> [recv corrupted packet]
+<13:05:51.895555> [recv corrupted packet]
+<13:05:51.904054> [recv corrupted packet]
+<13:05:51.912579> [recv corrupted packet]
+<13:05:51.921111> [recv corrupted packet]
+<13:05:51.931446> [recv corrupted packet]
+<13:05:51.938197> [recv corrupted packet]
+<13:05:51.946695> [recv corrupted packet]
+<13:05:51.955221> [recv corrupted packet]
+<13:05:51.963748> [recv corrupted packet]
+<13:05:51.974052> [recv corrupted packet]
+<13:05:51.980834> [recv corrupted packet]
+<13:05:51.989334> [recv corrupted packet]
+<13:05:51.997862> [recv corrupted packet]
+<13:05:52.006407> [recv corrupted packet]
+<13:05:52.015842> [recv corrupted packet]
+<13:05:52.023490> [recv ack] ACK1 8192
+
+****end of file has been reached, sending EOF packet
+
+<13:05:52.023931> [sending] PKT0 9216 (1024)
+<13:05:52.424611> [recv data] PKT0 9216 (1024) ACCEPTED
+<13:05:52.425057> [receiver completed]
+
+****Duration of process from receiver side: 1.90251302719ms
+...Receiver exited gracefully
+
+
+

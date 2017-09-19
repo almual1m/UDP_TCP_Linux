@@ -1,0 +1,16 @@
+Network Emulation:
+------------------
+python receiver.py 19196 &
+python sender.py 127.0.0.1 19196 sendingfile.txt
+
+To clear:
+sudo tc qdisc del dev lo root
+
+Testing:
+sudo tc qdisc add dev lo root netem rate 1mbit delay 25ms
+sudo tc qdisc add dev lo root netem rate 1mbit loss 20%
+sudo tc qdisc add dev lo root netem rate 1mbit delay 25ms reorder 10%
+sudo tc qdisc add dev lo root netem rate 1mbit corrupt 20%
+sudo tc qdisc add dev lo root netem rate 1mbit duplicate 20%
+
+Clear after each instruction
